@@ -1,18 +1,22 @@
+# Importing dependencies
 import asyncio
 import streamlit as st
 from streamlit_chat import message
 from bardapi import Bard
 import json
 
-with open('credentials.json','r') as f:
+#Reading the JSON file to fetch credentials
+with open('credentials.json', 'r') as f:
     file = json.load(f)
     token = file['token']
 
+# Funtion that generates and returns the response
 def generate_response(prompt):
     bard = Bard(token=token)
     response = bard.get_answer(prompt)
     return response['content']
 
+# Main function
 async def main():
     st.title("🤖Personal Tutoring!")
 
@@ -38,6 +42,7 @@ async def main():
     </style>
     '''
 
+    # Pushing changes to the UI
     st.markdown(changes, unsafe_allow_html=True)
     if 'generated' not in st.session_state:
         st.session_state['generated'] = []
@@ -45,6 +50,7 @@ async def main():
     if 'past' not in st.session_state:
         st.session_state['past'] = []
 
+    # Get text from the input field
     def get_text():
         input_text = st.text_input("You: ", "Hey bot!", key="input")
         return input_text
