@@ -1,0 +1,7 @@
+📁 CN-Workshop/
+├─📁 .streamlit/
+│ ├─📄 .gitkeep
+│ └─📄 config.toml
+├─📄 README.md
+├─📄 bard_app.py
+└─📄 tree.txt
