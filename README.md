@@ -24,7 +24,7 @@ Welcome to the **CN-Workshop repo**, where 2000 Coding Ninjas forged a magical t
 
 **3. Let the Learning Begin!**
 
-* Run `main.py` and prepare to be amazed! ✨
+* Run `app.py` and prepare to be amazed! ✨
 * Ask your questions, seek explanations, and let the bot guide your curiosity. 
 * Remember, the more you interact, the better the bot learns and adapts to your needs. 
 
